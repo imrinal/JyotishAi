@@ -63,4 +63,3 @@ This is a custom-built astrology chatbot that:
    - Optional PDF download via `jsPDF`
 
 ---
-```
