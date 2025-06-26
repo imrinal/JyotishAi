@@ -1,0 +1,24 @@
+# ⚙️ Python Cache & Bytecode
+__pycache__/
+*.pyc
+
+# ⚙️ Virtual Environment
+venv/
+
+# 📂 Output / Logs / Debug
+*.log
+*.pdf
+output/
+logs/
+
+# 🧪 Test Coverage / IDEs
+*.coverage
+.vscode/
+.idea/
+
+# 💻 OS Junk Files
+.DS_Store
+Thumbs.db
+
+# 📄 Environment Secrets (if added later)
+.env
