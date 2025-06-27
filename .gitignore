@@ -2,6 +2,10 @@
 __pycache__/
 *.pyc
 
+# 🐍 Python Virtual Environments
+venv/
+.venv/
+
 # 📂 Output / Logs / Debug
 *.log
 *.pdf
