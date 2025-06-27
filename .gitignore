@@ -2,9 +2,6 @@
 __pycache__/
 *.pyc
 
-# ⚙️ Virtual Environment
-venv/
-
 # 📂 Output / Logs / Debug
 *.log
 *.pdf
