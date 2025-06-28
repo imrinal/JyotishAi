@@ -2,25 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/wsgi.py", 
-      "use": "@vercel/python", 
+      "src": "backend/wsgi.py",
+      "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb", 
-        "runtime": "python3.11"  
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.11"
       }
-    },
-    {
-      "src": "frontend/**",      
-      "use": "@vercel/static-build" 
     }
   ],
   "routes": [
     { "src": "/predict", "dest": "backend/wsgi.py" },
     { "src": "/chat", "dest": "backend/wsgi.py" },
-
-    { "src": "/css/(.*)", "dest": "frontend/css/$1" },
-    { "src": "/js/(.*)", "dest": "frontend/js/$1" },
-    { "src": "/assets/(.*)", "dest": "frontend/assets/$1" },
-    { "src": "/", "dest": "frontend/index.html" }
+    { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
