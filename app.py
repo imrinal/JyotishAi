@@ -9,7 +9,7 @@ print("Python Path:", sys.path) # <--- ADD THIS LINE FOR DEBUGGING
 
 # Import your modular components
 from astrology_engine.calculator import calculate_chart
-from astrology_engine.rule_matcher import match_rules
+from astrology_engine.rule_matcher import match_rules, _load_all_rules_cached
 from ai_integrator import humanize_response, load_ai_model # load_ai_model is @st.cache_resource
 
 # --- 1. Streamlit Page Configuration ---
@@ -206,7 +206,7 @@ if not st.session_state.birth_details_submitted:
 
                         # Step 2: Load rules and match them to the chart
                         # Load rules only once if possible, or pass as argument
-                        all_rules = match_rules._load_all_rules_cached() # Using internal cached function
+                        all_rules = _load_all_rules_cached() # Now directly callable # Using internal cached function
                         raw_predictions = match_rules(chart_data, all_rules)
                         st.write("Raw predictions generated!") # For debugging
 
